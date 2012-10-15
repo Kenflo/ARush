@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ARush - watching the bird fall</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/vendor/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/static/vendor/bootstrap-tagmanager/bootstrap-tagmanager.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="./ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="./ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body>
+
+<!-- navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/">aRush - watching the bird fall</a>
+        </div>
+    </div>
+</div>
+<!-- /navbar -->
+
+<!-- forkme -->
+<a href="https://github.com/ierror/ARush/" class="hidden-phone"><img class="forkme"
+                                                                     src="/static/images/forkme.png"
+                                                                     alt="Fork me on GitHub"></a>
+<!-- /forkme -->
+
+<!-- container -->
+<div id="container-main" class="container">
+    {% block content %}
+    {% end%}
+
+    <footer class="row">
+        <div class="offset2 span8">
+            <hr/>
+        </div>
+        <div class="offset2 span8">
+        <span class='hidden-phone'>
+            &copy; Bernhard Janetzki and
+            <a href="https://github.com/ierror/ARush/graphs/contributors" target="_blank">Individual
+                contributors.</a>
+            |
+        </span>
+            <a href="/legal_information" target="_blank">Legal information</a>
+        </div>
+    </footer>
+</div>
+<!-- /container -->
+
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'
+        charset='utf-8'></script>
+<script>window.jQuery || document.write('<script src="/static/vendor/js/jquery-1.8.2.js"><\/script>')</script>
+<script src="/static/vendor/js/sockjs-0.3.js"></script>
+<script src="/static/vendor/js/moment-1.7.2.js"></script>
+<script src="/static/js/sockjs.client.js"></script>
+<script src="/static/js/config.js"></script>
+<script src="/static/js/model.post.js"></script>
+<script src="/static/vendor/bootstrap-tagmanager/bootstrap-tagmanager.js"></script>
+<script src="/static/js/global.js"></script>
+<script src="/static/js/hashTagSearch.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35600267-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+</html>

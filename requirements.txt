@@ -1,0 +1,7 @@
+redis==2.7.1
+requests==0.14.1
+simplejson==2.6.2
+sockjs-tornado==0.0.5
+tornado==2.4
+tornado-redis==0.0.7
+wsgiref==0.1.2
