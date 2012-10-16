@@ -2,3 +2,4 @@
 .idea/
 .DS_Store
 virtualenv/
+arush/deployment/env_production.py
