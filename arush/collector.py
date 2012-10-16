@@ -69,7 +69,7 @@ while True:
             # TODO: make async
             try:
                 requests.post(
-                    url=CFG_TORNDO_SERVER_URL,
+                    url=CFG_TORNDO_MGMT_SERVER_URL,
                     data={
                         'command': 'send_post_to_listeners',
                         'post': post_stringified,

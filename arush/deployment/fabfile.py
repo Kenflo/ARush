@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from fabric.api import env, roles, run, sudo, cd
 from fabric.contrib import files
-from env_production import APPNET_TOKEN, WEBSOCKET_SERVER_URL
+from env_production import APPNET_TOKEN, WEBSOCKET_SERVER_URL, TORNDO_MGMT_SERVER_URL
 
 
 REMOTE_REPO_PATH = '/opt/arush/www/'
@@ -10,7 +10,7 @@ env.user = 'root'
 
 # Define sets of servers as roles
 env.roledefs = {
-    'production_web': ['app-1.aru.sh'],
+    'production_web': ['46.252.16.97'],
 }
 
 @roles('production_web')
@@ -28,3 +28,7 @@ def deploy_production():
 
     # replace adn token
     files.sed('%sarush/settings.py' % (REMOTE_REPO_PATH), "^CFG_APPNET_TOKEN.*", 'CFG_APPNET_TOKEN = \"%s\"' % (APPNET_TOKEN))
+
+    # replace mgmt url
+    files.sed('%sarush/settings.py' % (REMOTE_REPO_PATH), "^CFG_TORNDO_MGMT_SERVER_URL.*", 'CFG_TORNDO_MGMT_SERVER_URL = \"%s\"' % (TORNDO_MGMT_SERVER_URL))
+
