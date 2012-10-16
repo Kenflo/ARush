@@ -24,7 +24,7 @@ def deploy_production():
     _sudo('cd %s; source virtualenv/bin/activate; pip install -r requirements.txt' % (REMOTE_REPO_PATH))
 
     # replace websocket url
-    files.sed('%sarush/static/js/config.js' % (REMOTE_REPO_PATH), "http://192.168.100.20:9000/ws", WEBSOCKET_SERVER_URL)
+    files.sed('%sarush/static/js/config.js' % (REMOTE_REPO_PATH), "http://localhost:9000/management/", WEBSOCKET_SERVER_URL)
 
     # replace adn token
     files.sed('%sarush/settings.py' % (REMOTE_REPO_PATH), "^CFG_APPNET_TOKEN.*", 'CFG_APPNET_TOKEN = \"%s\"' % (APPNET_TOKEN))
