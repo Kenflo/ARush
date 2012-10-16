@@ -58,8 +58,6 @@ while True:
                 pipe.expire(hash_key, CFG_EXPIRE_SECONDS)
                 hashtags.append(hashtag_normalized)
 
-                print 'posts:hashtag:%s' % (hashtag_normalized)
-
             # save max read post id
             if post_id > last_saved_post_id:
                 pipe.set(CFG_LAST_FETCHED_POST_ID_KEY, post_id)
