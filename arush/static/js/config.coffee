@@ -1,7 +1,7 @@
 # Change settings here
 class _Config
   constructor: ->
-    @websocketServerURL = 'http://192.168.100.20:9000/ws'
+    @websocketServerURL = 'http://localhost:9000/ws'
     return @
 
 root = exports ? this # http://stackoverflow.com/questions/4214731/coffeescript-global-variables

@@ -4,7 +4,7 @@ var root, _Config;
 _Config = (function() {
 
   function _Config() {
-    this.websocketServerURL = 'http://192.168.100.20:9000/ws';
+    this.websocketServerURL = 'http://localhost:9000/ws';
     return this;
   }
 
